@@ -35,8 +35,7 @@ public class UserRepositoryAdapter implements UserRepositoryPort {
     }
 
     @Override
-    public Optional<User> findById(String id) {
-        Long longId = Long.valueOf(id);
-        return userJpaRepository.findById(longId).map(UserMapper::toDomain);
+    public Optional<User> findById(Long id) {
+        return userJpaRepository.findById(id).map(UserMapper::toDomain);
     }
 }

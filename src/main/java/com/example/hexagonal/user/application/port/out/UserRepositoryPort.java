@@ -12,5 +12,5 @@ import java.util.Optional;
 public interface UserRepositoryPort {
     boolean exitsByEmail(String email);
     User save(User user);
-    Optional<User> findById(String id);
+    Optional<User> findById(Long id);
 }
